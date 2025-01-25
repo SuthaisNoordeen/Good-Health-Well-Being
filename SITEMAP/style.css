@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+body{
+    background-image: url(health.jpg);
+}
+
+.SiteMap{
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif;
+    stroke-width:4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) scale(0.9);
+}
+#img-logo{
+  padding-left: 0%;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+    top: 10%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: wheat;
+}
+
+svg g rect {
+    stroke-width: 2px;
+    stroke: green;
+}
+
+svg g text {
+    fill: snow;
+    font-weight: 550;
+}
+
+svg g a:hover rect{
+    stroke: #4d00b8;
+    transition: 0.3s ease;
+}
+
+svg g a:hover text {
+    fill: red;
+    transition: 0.5s ease;
+}
+
+svg g line {
+    stroke: snow;
+}
+
+
+/* nav*/
+      
+        
+      
+        /*nav bar*/
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(51, 51, 51, 0.5); /* for transparancy we have used 0.5 as 4th one */
+            z-index: 1000; /*Every time navigation bar should be up side */
+            animation: header 2s ease-in-out;
+          }
+          
+          @keyframes header{
+            0%{
+              transform: translateY(-100%); /* 100% it should be hidden when before the animation */
+            }
+          }
+          
+          header .navigation {
+            display: flex;
+            align-items: center; /* nav bar elements position set */
+            justify-content: space-between;
+            max-width: 1200px; 
+            margin: 0 auto;
+          }
+          
+          .navigation .logo {
+            color: #fff;
+            font-weight: 600;
+            font-size: 2.1rem;
+            text-decoration: none;
+            transition: 0.2s ease;
+          }
+          
+          .navigation .logo span {
+            color: #C06B3E;
+          }
+          
+          .navigation .menu-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+          }
+          
+          .navigation a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s ease;
+          }
+          
+          .navigation a:hover {
+            color: #2ecc71;
+            text-decoration: underline; /* Add underline on hover */
+          }
+          
+          #close-menu-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer; /* it will create hand pointer*/
+            display: none;
+          }
+          
+          
+          
+          
+          
+          @media (max-width: 768px) {
+            header {
+              padding: 10px;
+            }
+          
+            header.show-mobile-menu::before { 
+              content: "";
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              backdrop-filter: blur(5px);
+            }
+          
+            .navigation .logo {
+              font-size: 1.7rem;
+            }
+          
+          
+            .navigation .menu-links {
+              position: fixed;
+              top: 0;
+              left: -250px;
+              width: 250px;
+              height: 100vh;
+              background: #fff;
+              flex-direction: column;
+              padding: 70px 40px 0;
+              transition: left 0.2s ease;
+            }
+          
+            header.show-mobile-menu .navigation .menu-links {
+              left: 0;
+            }
+          
+            .navigation a {
+              color: #000;
+            }
+          }
+          /*search abutton*/
+          
+          form {
+            display: flex;
+            
+          }
+          
+          input[type="text"] {
+            padding: 5px;
+            border: 1px solid #2ecc71;
+            border-radius: 5px;
+            font-size: 16px;
+          }
+          
+          button[type="submit"] {
+            background-color:#2ecc71;
+            border: transparent;
+            padding: 10px 15px;
+            cursor: pointer;
+          }
+          
+          @keyframes textSlide { /* add the text animation*/
+          
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-30px); /* animation will be held y axis */
+            }
+          }
+                    
+                    
+                    
+                    
+                  
